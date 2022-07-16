@@ -1,0 +1,318 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro:wght@400;700&display=swap');
+
+/* body{
+  background: linear-gradient(
+    to bottom right,
+    #FFDEF2, #E6F0FF
+  );
+} */
+
+
+
+#main-logo{
+    padding: 0;
+    margin: 0;
+    width: 45px;
+}
+#mobile-logo{
+    padding: 0;
+    margin: 0;
+    width: 25px;
+}
+
+.menu-item{
+  text-transform: uppercase;
+}
+
+.laptop-img-side{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 420px;
+  height: 300px;
+}
+
+.D-list > li{
+    list-style: square;
+}
+
+.footer-basic {
+    padding:40px 0;
+    background-color:#ffffff;
+    color:#4b4c4d;
+  }
+  
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+
+.selection{
+  width: 85%;
+  margin: auto;
+}
+
+.pc-item{
+  padding-top: 25px;
+  margin: 25px;
+  font-size: 1.5rem;
+  list-style: none;
+  text-align: left;
+}
+
+.parts{
+  margin: 25px;
+  font-size: 1.5rem;
+  list-style: none;
+  text-align: left;
+  text-transform: capitalize;
+  padding-left: 25rem;
+}
+
+.iteam{
+  padding-top: 10px;
+  float: right;
+  padding-right: 25rem;
+}
+
+.total-price{
+  font-size: 2rem;
+  padding-bottom: 25px;
+  text-align: right;
+}
+
+
+.list-group-item {
+  border-radius: 25px;
+}
+
+.group{
+  width: 250px;
+  text-align: center;
+}
+
+.img-icons{
+  width: 55px;
+  height: 55px;
+}
+
+            /* AMC-Plans Style */
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* height: 100vh; */
+  padding-top: 55px;
+}
+
+.amc-card {
+  width: 430px;
+  height: 525px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  position: relative;
+  perspective: 1000px;
+  transform: perspective(1000px) translateY(0);
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+}
+
+.amc-card.dark {
+  background-color: #272727;
+  color: #fbfbfb;
+}
+
+.white{
+ color: #cccaca;
+}
+
+.amc-card.dark .purchase-button {
+  border: 1px solid indianred;
+}
+
+.amc-card.light {
+  background-color: #fbfbfb;
+  color: #272727;
+}
+
+.amc-card.light .purchase-button {
+  border: 1px solid indianred;
+}
+
+.card-container {
+  display: flex;
+}
+
+.card-wrapper{
+   margin: 25px;
+}
+
+.card-wrapper:hover .amc-card {
+  transform: rotateY(179deg);
+  z-index: 2;
+}
+
+.card-wrapper:hover .amc-card .text-overlay {
+  opacity: 0;
+  transform-style: preserve-3d;
+  z-index: 1;
+}
+
+.card-wrapper:hover .amc-card .purchase-button-container {
+  opacity: 1;
+}
+
+.text-overlay {
+  transform: perspective(1000px) translateY(0) translateZ(80px);
+  transition: transform 0.8s ease-in-out, opacity 1s ease;
+  pointer-events: none;
+  width: 100%;
+  perspective: inherit;
+  padding-top: 125px;
+}
+
+.card-h1 {
+  color: #272727;
+}
+
+.card-h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.amc-price {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin: 20px;
+}
+
+.purchase-button-container {
+  color: indianred;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  transform: perspective(1000px) rotateY(179deg) translateY(0) translateZ(80px);
+  opacity: 0;
+  z-index: -1;
+  transition: transform 0.8s ease-in-out, opacity 1s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.purchase-button-container .purchase-button {
+  padding: 10px 40px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  cursor: pointer;
+}
+
+.purchase-button-container .purchase-button.light:hover {
+  background-color: indianred;
+  color: #fbfbfb;
+}
+
+.purchase-button-container .purchase-button.dark:hover {
+  background-color: indianred;
+  color: #272727;
+}
+
+.details-text {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px 10px;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: #858585;
+  font-size: 0.9rem;
+}
+
+small {
+  font-size: 0.75rem;
+  font-weight: 100;
+  color: #858585;
+}
+
+.fa-solid {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.back-h2 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.card-img-top{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: 180px;
+}
+
+          /* AMC-Plans style End */
+
+@media screen and (max-width: 1400px) {
+  iframe{
+      display: none;
+  }
+}
